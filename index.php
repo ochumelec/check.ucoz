@@ -31,7 +31,11 @@ require_once "config.php";
 */
 $zones = array('.ucoz.net', '.usite.pro', '.ucoz.club', '.ucoz.org', '.at.ua', '.my1.ru', '.clan.su', '.moy.su', '.do.am', '.ucoz.site', '.ucoz.ru', '.ucoz.com');
 
-$new_domains = $_POST['new_domain']; // получаем введенные домены
+$new_domains = $_POST['new_domain'];
+if (!$new_domains) {
+    echo "введите домены";
+    exit;
+}// получаем введенные домены
 $order = array("\r\n", "\n", "\r");
 $replace = "<br>";
 $temp_new_domains = str_replace($order, $replace, $new_domains); //делаем замену переноса каретки для дальнейшего преобразования в массив
