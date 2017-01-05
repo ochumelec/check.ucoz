@@ -71,16 +71,16 @@ class Domain
 
     }
 
-    public function checkName()
+    public function checkName($name)
         /**
          * FIXME Проверяем длину домена, если больше 15 символов до зоны домена  - то удаляем
          */
     {
-        if (strlen($this->name) <= 15) {
-            echo "Домен $this->name меньше 15-ти символов!";
+        if (strlen($name) <= 15) {
+            echo "Домен $name меньше 15-ти символов!";
             return TRUE;
         } else {
-            echo "Домен $this->name больше 15-ти символов!";
+            echo "Домен $name больше 15-ти символов!";
             return FALSE;
         }
     }
