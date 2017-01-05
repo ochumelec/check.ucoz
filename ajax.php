@@ -8,11 +8,12 @@
 require_once ("class.php");
 require_once ("config.php");
 
+$class = new Domain();
 
 switch ( $_POST['action'] )
 {
-    case 'index':
-        action_index();
+    case 'chack_name':
+        $class->checkName($_POST['name']);
         break;
     case 'save':
         action_save();
