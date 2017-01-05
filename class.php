@@ -13,10 +13,9 @@ class Domain
 
     const ZONES = array('.ucoz.net', '.usite.pro', '.ucoz.club', '.ucoz.org', '.at.ua', '.my1.ru', '.clan.su', '.moy.su', '.do.am', '.ucoz.site', '.ucoz.ru', '.ucoz.com');
 
-    /* public function __construct($id, $time, $name, $status)
+     public function __construct()
      {
-         echo "Новый домен создан и добавлен в базу!";
-     }*/
+     }
 
     /* public function __destruct()
      {
@@ -112,6 +111,6 @@ class Domain
 
 }
 
-$domain1 = new Domain;
-$domain1->name = "234324234.ucoz.com";
-echo $domain1->checkDomain($domain1->name);
+// $domain1 = new Domain;
+// $domain1->name = "234324234.ucoz.com";
+// echo $domain1->checkDomain($domain1->name);
